@@ -1,13 +1,36 @@
 @import "utils/variables";
 
-h1 {
-  font-family: $font-family-roboto-sans-serif, serif;
-  font-size: 3rem;
-  font-weight: 500;
+.header {
+  display: flex;
+  align-items: center;
+
+  .navbar {
+    margin-right: 15px;
+  }
+
+  .combo-boxes {
+    flex-grow: 1;
+    text-align: right;
+
+    .form-control {
+      display: inline-block;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      margin-top: 5px;
+      
+      &:last-child {
+        margin-bottom: 5px;
+      }
+    }
+  }
 }
 
-h2 {
-  font-family: $font-family-roboto-sans-serif, serif;
-  font-size: 1.7rem;
-  font-weight: 400;
+@media ( min-width : 768px ) {
+  .header {
+    .combo-boxes {
+      .form-control {
+        margin-left: 15px;
+      }
+    }
+  }
 }

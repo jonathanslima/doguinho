@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Doguinho</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Doguinho</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Noto+Serif&family=Oswald&family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
-		<!-- Just an image -->
-		<nav class="navbar border-0">
-			<a class="m-2 d-flex align-items-center" href="#">
-				<img src="assets/images/doguinho-logo.png" width="30" height="30" alt="">
-			</a>
-		</nav>
+		<header class="header col xs-12">
+			<nav class="navbar border-0 p-0">
+				<a class="m-2 d-flex align-items-center" href="#">
+					<img src="assets/images/doguinho-logo.png" width="50" height="50" alt="">
+				</a>
+			</nav>
+
+			<div id="comboBoxes" class="combo-boxes">
+				<select class="col-sm-3 col-lg-2 form-control" id="comboBoxRace">
+					<option disabled selected>Selecione a raça</option>
+					<option>1</option>
+				</select>
+	
+				<select class="col-sm-3 col-lg-2 form-control" id="comboBoxColor">
+					<option disabled selected>Selecione a cor</option>
+					<option>Shocking Pink Crayola</option>
+					<option>State Blue</option>
+					<option>Persian Green</option>
+					<option>Jonquil</option>
+					<option>Tart Orange</option>
+				</select>
+	
+				<select class="col-sm-3 col-lg-2 form-control" id="comboBoxFont">
+					<option disabled selected>Selecione a fonte</option>
+					<option>Architects Daughter</option>
+					<option>Noto Serif</option>
+					<option>Oswald</option>
+					<option>Roboto</option>
+					<option>Ubuntu</option>
+				</select>
+			</div>
+		</header>
 	</div>
 </div>
 
 
-<footer class="footer">
-    <p>Gulp-SASS-Bootstrap-Boilerplate</p>
+<footer class="footer p-2 text-white text-center">
+		<p><small>Feito com Gulp-SASS-Bootstrap Boilerplate</small></p>
 </footer>
 </body>
 
