@@ -41,6 +41,40 @@ span {
   display: inline-block;
 }
 
+.container-image {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: column;
+
+  .figure-dog {
+    position: relative;
+
+    .name-dog {
+      position: absolute;
+      bottom: 0;
+      padding: 15px;
+      background-color: rgba(33, 33, 33, .7);
+      color: #ffffff;
+      
+      i, svg {
+        margin-left: 10px;
+      }
+    }
+
+    .img-dog {
+      width: 100%;
+    }
+  }
+
+  .btn-save {
+    background-color: #2a9d8f;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    border: none;
+  }
+}
+
 // Class for when element is above threshold
 .pin-top {
   position: relative;
