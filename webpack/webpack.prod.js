@@ -86,7 +86,7 @@ module.exports = merge(common, {
         }),
         new FaviconsWebpackPlugin({
             // Your source logo
-            logo: './src/assets/images/sample-logo.png',
+            logo: './src/assets/images/doguinho-logo.png',
             // The prefix for all image files (might be a folder or a name)
             prefix: 'assets/icons_[hash:6]/',
             // Emit all stats of the generated icons

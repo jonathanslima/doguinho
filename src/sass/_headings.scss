@@ -5,6 +5,17 @@
   align-items: center;
   box-shadow: 3px 3px 5px #d0d0d0;
 
+  .spinner-border {
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    top: 13px;
+  }
+
+  .title {
+    display: none;
+  }
+
   .navbar {
     margin-right: 15px;
   }
@@ -12,6 +23,10 @@
   .combo-boxes {
     flex-grow: 1;
     text-align: right;
+
+    .combo-box-race {
+      text-transform: capitalize;
+    }
 
     .form-control {
       display: inline-block;
@@ -26,8 +41,37 @@
   }
 }
 
+@media ( min-width : 576px ) {
+  .header {
+    .spinner-border {
+      position: relative;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
 @media ( min-width : 768px ) {
   .header {
+    .navbar {
+      transition: 500ms all ease;
+
+      a {
+        flex-direction: column;
+      }
+
+      .title {
+        margin: 0;
+        color: #333333;
+        display: inline-block;
+        font-weight: 700;
+        text-shadow: none;
+        text-decoration: none;
+        font-size: 1em;
+        text-transform: uppercase;
+      }
+    }
+
     .combo-boxes {
       .form-control {
         margin-left: 15px;

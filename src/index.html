@@ -13,33 +13,37 @@
 	<div class="row">
 		<header class="header col xs-12">
 			<nav class="navbar border-0 p-0">
-				<a class="m-2 d-flex align-items-center" href="#">
-					<img src="assets/images/doguinho-logo.png" width="50" height="50" alt="">
+				<a class="m-2 d-flex align-items-center" href="javascript:;">
+					<img src="assets/images/doguinho-logo.png" width="50" height="50" alt="Doguinho">
+					<h1 class="title name-site">Doguinho</h1>
 				</a>
 			</nav>
 
 			<div id="comboBoxes" class="combo-boxes">
-				<select class="col-sm-3 col-lg-2 form-control" id="comboBoxRace">
+				<select class="col-sm-3 col-lg-2 form-control combo-box-race" id="comboBoxRace">
 					<option disabled selected>Selecione a raça</option>
-					<option>1</option>
 				</select>
+				
+				<div class="d-none spinner-border text-secondary" role="status">
+					<span class="sr-only">Loading...</span>
+				</div>
 	
 				<select class="col-sm-3 col-lg-2 form-control" id="comboBoxColor">
 					<option disabled selected>Selecione a cor</option>
-					<option>Shocking Pink Crayola</option>
-					<option>State Blue</option>
-					<option>Persian Green</option>
-					<option>Jonquil</option>
-					<option>Tart Orange</option>
+					<option value="Shocking Pink Crayola">Shocking Pink Crayola</option>
+					<option value="State Blue">State Blue</option>
+					<option value="Persian Green">Persian Green</option>
+					<option value="Jonquil">Jonquil</option>
+					<option value="Tart Orange">Tart Orange</option>
 				</select>
 	
 				<select class="col-sm-3 col-lg-2 form-control" id="comboBoxFont">
 					<option disabled selected>Selecione a fonte</option>
-					<option>Architects Daughter</option>
-					<option>Noto Serif</option>
-					<option>Oswald</option>
-					<option>Roboto</option>
-					<option>Ubuntu</option>
+					<option value="Architects Daughter">Architects Daughter</option>
+					<option value="Noto Serif">Noto Serif</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Roboto">Roboto</option>
+					<option value="Ubuntu">Ubuntu</option>
 				</select>
 			</div>
 		</header>
@@ -48,23 +52,35 @@
 
 <div class="container">
 	<div class="row">
-		<section id="containerImage" class="align-items-center container-image d-flex col xs-12 justify-content-center">
+		<section id="containerImage" class="no-image align-items-center container-image d-flex col xs-12 justify-content-center">
 			<figure class="figure-dog">
-				<img id="imgDog" src="assets/images/daguinho-teste.jpg" class="img-dog" alt="little dog">	
+				<img id="imgDog" src="assets/images/doguinho-base.jpg" class="img-dog" alt="little dog">	
 				<figcaption id="nameDog" class="name-dog">
-					<input type="text" class="d-none" />
-					SPIKE <i class="far fa-edit"></i>
+
+					<div class="input-name-dog d-none m-3 align-items-center justify-content-between">
+						<input type="text" class="input-name" placeholder="Digite o nome" />
+						<i id="saveName" class="far fa-save" title="save"></i>
+						<i id="close" class="fas fa-times" title="close"></i>
+					</div>
+
+					<span class="name"><span>Digite o nome</span> <i class="far fa-edit"></i></span>
 				</figcaption>
 			</figure>
+			<p class="text-warning"><small>Por favor adicione um nome</small></p>
 
-			<button class="btn btn-save btn-large">Salvar</button>
+			<button id="save" class="btn btn-save btn-large">
+				Salvar
+				<div class="spinner-border d-none text-light" role="status">
+					<span class="sr-only">Loading...</span>
+				</div>
+			</button>
 		</section>
 	</div>
 </div>
 
 
 <footer class="footer p-2 text-white text-center">
-		<p><small>Doguinho - Feito com Gulp-SASS-Bootstrap Boilerplate - Jonathan Lima</small></p>
+		<p><small>Doguinho - Feito com Gulp-SASS-Bootstrap Boilerplate - jonathanslima</small></p>
 </footer>
 </body>
 
